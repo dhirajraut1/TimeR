@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/3003/3003202.png" type="image/x-icon">
-    <!-- <link rel="stylesheet" href="./styles/style.css"> -->
-    <!-- <link rel="stylesheet" href="./styles/bootstrap.min.css"> -->
 
     <!-- Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -16,19 +14,14 @@
     <title>Mark Your Time</title>
 
     <style>
-        /* @import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap'); */
-        /* @import url('https://fonts.googleapis.com/css2?family=Eczar&display=swap'); */
         @import url('https://fonts.googleapis.com/css2?family=Eczar&family=Noto+Sans+Devanagari:wght@200;400;600&display=swap');
 
 
         body {
-            /* width: 420px;
-  height: 400px; */
             font-family: 'Noto Sans Devanagari', sans-serif;
         }
 
         div.sloka-container {
-            /* background:linear-gradient(189deg,#fff 19%,#f7fffa 50%);*/
             color: #4f4141;
         }
 
@@ -37,13 +30,8 @@
             opacity: +.98
         }
 
-        /* h2 {
-  font-family: 'Yatra One', cursive;
-} */
-
         h3 {
             line-height: 23pt;
-            /* font-family: 'Yatra One', cursive; */
             margin: 10px;
             color: #4f4141;
             font-weight: 600;
@@ -55,10 +43,6 @@
 
         p {
             font-size: 15px;
-        }
-
-        footer p {
-            font-size: 10px;
         }
     </style>
 </head>
@@ -72,14 +56,12 @@
             <p>Click on Add Time button to set the time </p>
             <p>Track your time and be more productive. Easier to reflect your day. </p>
 
-            <!-- <input class="form-control" type="text" id="text">
-            <button class="btn btn-primary" id="btn">Show Current Time</button>
-            <ul id="times"></ul> -->
+            <input class="form-control m-2" type="text" id="text">
+            <button class="btn btn-primary pt-2" id="btn">Mark Time</button>
+            <button class="btn btn-danger pt-2 ms-2" id="reset">Reset Data</button>
+            <button class="btn btn-success pt-2 ms-2" id="exportCSV">Export to CSV</button>
 
-            <input class = "form-control m-2" type="text" id="text">
-            <button class = "btn btn-primary pt-2" id="btn">Mark Time</button>
-            <button class = "btn btn-danger pt-2 ms-2" id="reset">Reset Data</button>
-            <table  class="table table-hover table-striped mt-2" id="times">
+            <table class="table table-hover table-striped mt-2" id="times">
                 <thead>
                     <tr>
                         <th scope="col">Time</th>
@@ -91,11 +73,6 @@
                 </tbody>
             </table>
 
-
-<!-- 
-            <footer class="p-2">
-                <p>Made with 🙏 by Dhiraj Raut. <br>
-            </footer> -->
         </div>
     </div>
 
@@ -106,7 +83,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
-
     </body>
 
 </html>
