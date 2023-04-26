@@ -34,6 +34,9 @@ const storedData = JSON.parse(localStorage.getItem("timesData")) || [];
 // Add the stored data to the table
 storedData.forEach((data, index) => {
   const row = document.createElement("tr");
+  const dateCell = document.createElement("td");
+  dateCell.textContent = data.date;
+  row.appendChild(dateCell);
   const timeCell = document.createElement("td");
   timeCell.textContent = data.time;
   row.appendChild(timeCell);
@@ -59,11 +62,16 @@ btn.addEventListener("click", () => {
   // Get the current time and entered text
   const now = new Date();
   const dateTime = now.toISOString();
+  const options = { weekday: 'short', year: 'numeric', month: 'long', day: 'numeric' };
+  const date = now.toLocaleDateString('en-US',options);
   const timeString = now.toLocaleTimeString();
   const enteredText = text.value;
 
   // Create a new row element for the current time and entered text
   const row = document.createElement("tr");
+  const dateCell = document.createElement("td");
+  dateCell.textContent = date;
+  row.appendChild(dateCell);
   const timeCell = document.createElement("td");
   timeCell.textContent = timeString;
   row.appendChild(timeCell);
@@ -76,7 +84,7 @@ btn.addEventListener("click", () => {
   text.value = "";
 
   // Save the data to localStorage
-  const data = { dateTime: dateTime, time: timeString, text: enteredText };
+  const data = { date: date, dateTime: dateTime, time: timeString, text: enteredText };
   storedData.push(data);
   localStorage.setItem("timesData", JSON.stringify(storedData));
 
